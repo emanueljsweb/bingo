@@ -88,6 +88,21 @@ function geraCartelaHTML (nomeJogador, numeros) {
     divCartelas.appendChild(div);
 }
 
+function resetaCartelas() {
+    // Seleciona a div que armazena todas as cartelas.
+    var divCartelas = document.querySelector('#cartelas');
+
+    // Seleciona todas as cartelas do jogo.
+    var cartelas = document.querySelectorAll('#cartelas > div');
+
+    // Remove todas elas do HTML.
+    cartelas.forEach(function (cartela) {
+            divCartelas.removeChild(cartela);
+        }
+    );
+
+}
+
 function iniciarJogo() {
 
     // Verifica se existem, no mínimo, duas cartelas para iniciar o jogo.

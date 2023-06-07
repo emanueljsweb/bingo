@@ -82,8 +82,8 @@ div.cartela {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
-    padding: 2em;
     justify-content: center;
+    padding: 2em;
 }
 
 div.cartela h3 {
