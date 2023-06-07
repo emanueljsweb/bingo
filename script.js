@@ -1,6 +1,9 @@
 // Inicializa uma variável que armazenará os dados das cartelas e jogadores.
 var cartelas = [];
 
+// Inicializa uma variável que armazenará o status do jogo.
+var jogoAtivo = false;
+
 function geraNumerosAleatorios (tamanho, valorMinimo, valorMaximo) {
     var numeros = [];
 
@@ -8,8 +11,8 @@ function geraNumerosAleatorios (tamanho, valorMinimo, valorMaximo) {
     while (numeros.length < tamanho) {
         // Gera um número aleatório.
         var numeroAleatorio = Math.floor(Math.random() * (valorMaximo - valorMinimo) + valorMinimo);
-        // Verifica se esse número não existe no Array, caso não exista, será inserido.
-        if (!numeros.includes(numeroAleatorio)){
+        // Verifica se esse número não existe no Array, caso não exista e seja maior que ou igual ao valor mínimo, será inserido.
+        if (!numeros.includes(numeroAleatorio) && numeroAleatorio >= valorMinimo){
             numeros.push(numeroAleatorio);
         }
     }
@@ -20,10 +23,14 @@ function geraNumerosAleatorios (tamanho, valorMinimo, valorMaximo) {
 function geraCartela () {
     // Solicita o nome do jogador.
     var nomeJogador = prompt('Digite o nome do jogador.');
+    if(nomeJogador.length <=2) {
+        alert('O nome do jogador não pode ser menor que três caracteres.');
+        return;
+    }
 
     // Gera números aleatórios.
     var numeros = []
-    numeros.push(geraNumerosAleatorios(5, 0, 15));
+    numeros.push(geraNumerosAleatorios(5, 1, 15));
     numeros.push(geraNumerosAleatorios(5, 16, 30));
     numeros.push(geraNumerosAleatorios(5, 31, 45));
     numeros.push(geraNumerosAleatorios(5, 46, 60));
@@ -79,4 +86,19 @@ function geraCartelaHTML (nomeJogador, numeros) {
 
     // Adiciona a div criada à div que armazena todas as cartelas.
     divCartelas.appendChild(div);
+}
+
+function iniciarJogo() {
+
+    // Verifica se existem, no mínimo, duas cartelas para iniciar o jogo.
+    if(cartelas.length < 2) {
+        alert('São necessários, no mínimo, dois jogadores para iniciar o jogo.');
+        return;
+    }
+
+    // Define que o jogo está ativo.
+    jogoAtivo = true;
+
+
+
 }

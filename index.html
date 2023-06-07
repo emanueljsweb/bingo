@@ -11,9 +11,43 @@
 
     <body>
         
-        <div id="cartelas">
-            
-        </div>
+        <header class="flex-container">
+            <div id="titulo">
+                <h1>Bingo On-line</h1>
+                <p>Jogue bingo e se divirta com seus amigos, é on-line e grátis!</p>
+            </div>
+            <div id="menu">
+                <button class="button-accent">Iniciar Jogo</button>
+                <a class="button-accent" href="regras-do-jogo.html">Regras do Jogo</a>
+            </div>
+        </header>
+
+        <main class="flex-container">
+
+            <div id="div-cartelas" class="w-70">
+
+                <div id="cabecalho-cartelas" class="flex-container">
+                    <h3>Cartelas</h3>
+                    <button class="button-accent" onclick="geraCartela()">Adicionar Cartela</button>
+                    <button class="button-accent" onclick="geraCartela()">Adicionar Cartela</button>
+                </div>
+
+                <div id="cartelas" class="grid-container">
+                    <div class="cartela"><h3>Teste</h3><table><thead><tr><td>B</td><td>I</td><td>N</td><td>G</td><td>O</td></tr></thead><tbody><tr><td>5</td><td>28</td><td>37</td><td>59</td><td>71</td></tr><tr><td>6</td><td>21</td><td>35</td><td>48</td><td>63</td></tr><tr><td>8</td><td>29</td><td>X</td><td>57</td><td>65</td></tr><tr><td>0</td><td>25</td><td>40</td><td>46</td><td>67</td></tr><tr><td>1</td><td>20</td><td>41</td><td>50</td><td>64</td></tr></tbody></table></div>
+                    <div class="cartela"><h3>Teste</h3><table><thead><tr><td>B</td><td>I</td><td>N</td><td>G</td><td>O</td></tr></thead><tbody><tr><td>5</td><td>28</td><td>37</td><td>59</td><td>71</td></tr><tr><td>6</td><td>21</td><td>35</td><td>48</td><td>63</td></tr><tr><td>8</td><td>29</td><td>X</td><td>57</td><td>65</td></tr><tr><td>0</td><td>25</td><td>40</td><td>46</td><td>67</td></tr><tr><td>1</td><td>20</td><td>41</td><td>50</td><td>64</td></tr></tbody></table></div>
+                    <div class="cartela"><h3>Teste</h3><table><thead><tr><td>B</td><td>I</td><td>N</td><td>G</td><td>O</td></tr></thead><tbody><tr><td>5</td><td>28</td><td>37</td><td>59</td><td>71</td></tr><tr><td>6</td><td>21</td><td>35</td><td>48</td><td>63</td></tr><tr><td>8</td><td>29</td><td>X</td><td>57</td><td>65</td></tr><tr><td>0</td><td>25</td><td>40</td><td>46</td><td>67</td></tr><tr><td>1</td><td>20</td><td>41</td><td>50</td><td>64</td></tr></tbody></table></div>                
+                </div>
+
+            </div>
+
+            <div id="jogo" class="w-30">
+                <h3>Números sorteados</h3>
+                <div id="numeros-sorteados" class="flex-container">
+
+                </div>
+            </div>
+
+        </main>
         
         <script src="script.js"></script>
     </body>
